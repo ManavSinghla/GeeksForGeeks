@@ -15,16 +15,15 @@ class Node
 
 class Solution {
     // Function to return sum of all nodes of a binary tree
-    static void fun(int[] ans,Node root){
-        if(root==null) return;
-        ans[0]+=root.data;
-        fun(ans,root.left);
-        fun(ans,root.right);
+    static void fun(int[] a,Node root){
+        if(root == null ) return;
+        a[0]+=root.data;
+        fun(a,root.left);
+        fun(a,root.right);
     }
     static int sumBT(Node root) {
-        // Your code here
-        int[] ans=new int[1];
-        fun(ans,root);
-        return ans[0];
+        int[] a={0};
+        fun(a,root);
+        return a[0];
     }
 }
