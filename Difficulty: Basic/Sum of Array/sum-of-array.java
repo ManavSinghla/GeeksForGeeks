@@ -1,13 +1,14 @@
 // User function Template for Java
 
 class Solution {
-    int i=-1;
-    int arraySum(int arr[]) {
-        // code here
-        if(i>=arr.length-1){
-            return 0;
-        }
-        i++;
-        return arr[i]+arraySum(arr);
+    void fun(int[] ans,int[] nums,int i){
+        if(i==nums.length) return;
+        ans[0]+=nums[i];
+        fun(ans,nums,i+1);
+    }
+    int arraySum(int[] nums) {
+        int[] ans={0};
+        fun(ans,nums,0);
+        return ans[0];
     }
 }
