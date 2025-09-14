@@ -3,7 +3,7 @@ class Solution {
         // code here
         int m=W;
         int n=val.length;
-        int[][] ans=new int[n+1][m+1];
+        int ans[][]=new int[n+1][m+1];
         for(int i=1;i<=n;i++){
             for(int j=1;j<=m;j++){
                 if(wt[i-1]>j){
