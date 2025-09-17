@@ -4,10 +4,8 @@ class Solution {
         // code here
         int n=nums.length;
         int m=target;
-        int[][] ans=new int[n+1][m+1];
-        for(int i=0;i<=n;i++){
-            ans[i][0]=1;
-        }
+        int[][] ans= new int[n+1][m+1];
+        ans[0][0]=1;
         for(int i=1;i<=n;i++){
             for(int j=0;j<=m;j++){
                 if(nums[i-1]>j){
